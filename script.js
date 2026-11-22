@@ -23,5 +23,5 @@ form.addEventListener("submit", function (event) {
   const vtérf = (0.24 * voszlop * átm * átm) / 100;
 
   oszlopElem.textContent = `Vízoszlop: ${Number(voszlop.toFixed(2))}`;
-  terfElem.textContent = `Víztérfogat: ${Number(vtérf.toFixed(2))}`;
+  terfElem.textContent = `Víztérfogat: ${Number(vtérf.toFixed(3))}`;
 });
