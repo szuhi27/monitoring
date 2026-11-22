@@ -1,22 +1,27 @@
 const form = document.getElementById("calcForm");
-const oszlop = document.getElementById("oszlop");
-const térf = document.getElementById("térf");
+const oszlopElem = document.getElementById("oszlop");
+const terfElem = document.getElementById("térf");
+
+function toNumber(value) {
+  return parseFloat(value.trim().replace(",", "."));
+}
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevents the page from reloading
+  event.preventDefault();
 
-  const vszint = document.getElementById("vszint").value.trim();
-  const mélys = document.getElementById("mélys").value.trim();
-  const átm = document.getElementById("átm").value.trim();
+  const vszint = toNumber(document.getElementById("vszint").value);
+  const mélys = toNumber(document.getElementById("mélys").value);
+  const átm = toNumber(document.getElementById("átm").value);
 
-  // --- Replace this section with your own calculation logic ---
-  const voszlop = mélys - vszint
-  const térf = 0.24 * voszlop * átm * átm / 100
+  if (Number.isNaN(vszint) || Number.isNaN(mélys) || Number.isNaN(átm)) {
+    oszlopElem.textContent = "Vízoszlop: enter valid numbers";
+    terfElem.textContent = "Víztérfogat: —";
+    return;
+  }
 
-  const olszlop_out = `Vízoszlop:: ${voszlop}`;
-  const térf_out = `Víztérfogat: ${térf}`;
-  // ------------------------------------------------------------
+  const voszlop = mélys - vszint;
+  const vtérf = (0.24 * voszlop * átm * átm) / 100;
 
-  oszlop.textContent = olszlop_out;
-  térf.textContent = térf_out;
+  oszlopElem.textContent = `Vízoszlop: ${Number(voszlop.toFixed(2))}`;
+  terfElem.textContent = `Víztérfogat: ${Number(vtérf.toFixed(2))}`;
 });
