@@ -17,8 +17,8 @@
     </header>
 
     <div style="margin-top: 70px" class="text-center white-text">
-        <main role="main" class="flex-vert pb-3">
-            <div class="container">
+        <main role="main" class="flex pb-3">
+            <div class="container flex">
                 <form id="calcForm">
                 <div class="input-row">
                     <label for="vszint">Vízszint (m)</label>
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="input-row">
-                    <label for="átm">Csőátmérő</label>
+                    <label for="átm">Csőátmérő (mm)</label>
                     <input type="text" id="átm" placeholder="Enter text...">
                 </div>
 
@@ -39,15 +39,15 @@
                 </form>
 
                 <div class="results">
-                <p id="oszlop">Vízoszlop: —</p>
-                <p id="térf">Víztérfogat: —</p>
+                    <p id="oszlop">Vízoszlop: —</p>
+                    <p id="térf">Víztérfogat: —</p>
                 </div>
             </div>
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" data-bs-theme="dark">
-        <div class="container">
+    <footer class="border-top footer text-muted flex" data-bs-theme="dark">
+        <div class="">
             &copy; 2026 - davidszuhai
         </div>
     </footer>

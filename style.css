@@ -102,8 +102,24 @@ p{
 }
 
 .results p {
-  font-size: 15px;
-  color: #1f2937;
+  color: #000000;
+  font-weight: bold;
   margin-bottom: 8px;
   min-height: 22px;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+ .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+  }
