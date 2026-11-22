@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="David Szuhai">
+    <meta property="og:description" content="A personal site to showcase my skills and projects. It is an extended resume where there are pictures next to the text.">
+    <meta property="og:url"content="https://davidszuhai.com/" />
+    <meta property="og:image" content="./images/site-preview.jpg" />
+    <title>davidszuhai</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header id="top-bar">
+        
+    </header>
+
+    <div style="margin-top: 70px" class="text-center white-text">
+        <main role="main" class="flex-vert pb-3">
+            <div class="container">
+                <form id="calcForm">
+                <div class="input-row">
+                    <label for="vszint">Vízszint (m)</label>
+                    <input type="text" id="field1" placeholder="Enter text...">
+                </div>
+
+                <div class="input-row">
+                    <label for="mélys">Talpmélység (m)</label>
+                    <input type="text" id="field2" placeholder="Enter text...">
+                </div>
+
+                <div class="input-row">
+                    <label for="átm">Csőátmérő</label>
+                    <input type="text" id="field3" placeholder="Enter text...">
+                </div>
+
+                <button type="submit" id="calculateBtn">Calculate</button>
+                </form>
+
+                <div class="results">
+                <p id="oszlop">Vízoszlop: —</p>
+                <p id="térf">Víztérfogat: —</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted" data-bs-theme="dark">
+        <div class="container">
+            &copy; 2026 - davidszuhai
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
